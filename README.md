@@ -2,6 +2,8 @@
 
 Versão pública, fictícia e independente inspirada em um projeto privado de área de membros. **Não é o ambiente de produção** e não contém dados de alunos, vídeos, credenciais, integração com banco de dados ou conteúdo de clientes.
 
+![Prévia do painel demonstrativo](assets/preview.png)
+
 ## Recursos demonstrados
 
 - Painel do aluno com cursos, aulas e indicadores de progresso.
