@@ -39,7 +39,7 @@ const courses = [
     tone: "peach",
   },
 ];
-const storageKey = "horizonte-academy-demo-progress-v1";
+const storageKey = "horizonte-academy-portfolio-progress-v1";
 let completed = readProgress();
 let activeCourse = courses[0];
 let activeLessonIndex = 0;
@@ -60,7 +60,7 @@ function saveProgress() {
   try {
     localStorage.setItem(storageKey, JSON.stringify([...completed]));
   } catch {
-    /* Demo remains usable without storage. */
+    /* The interface remains usable without storage. */
   }
 }
 function lessonKey(course, index) {
@@ -120,7 +120,7 @@ const viewNames = {
   library: [
     "Meus cursos",
     "Aprenda no seu ritmo.",
-    "Explore conteúdos de demonstração organizados por curso.",
+    "Explore conteúdos fictícios organizados por curso.",
   ],
   progress: [
     "Meu progresso",
@@ -158,7 +158,7 @@ function openLesson(course, index) {
   document.getElementById("lesson-category").textContent = course.category;
   document.getElementById("lesson-title").textContent = course.lessons[index];
   document.getElementById("lesson-description").textContent =
-    `Aula ${index + 1} de ${course.lessons.length} do curso ${course.title}. Esta tela demonstra uma estrutura de aprendizagem; não há vídeo ou conteúdo pago neste repositório.`;
+    `Aula ${index + 1} de ${course.lessons.length} do curso ${course.title}. Esta tela apresenta uma estrutura de aprendizagem; não há vídeo ou conteúdo pago neste repositório.`;
   const completeButton = document.getElementById("complete-lesson");
   completeButton.textContent = completed.has(lessonKey(course, index))
     ? "Aula concluída ✓"
