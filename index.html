@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Demonstração pública de uma área de membros para portfólio de desenvolvimento web."
+    />
+    <meta name="theme-color" content="#101b31" />
+    <title>Horizonte Academy | Área de membros - demonstração</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <div class="demo-banner">
+      Demonstração de portfólio · Conteúdo fictício · Sem login, pagamentos ou
+      dados reais
+    </div>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="logo" href="#inicio" aria-label="Horizonte Academy, início"
+          ><span class="logo-mark">H</span
+          ><span>HORIZONTE<small>ACADEMY</small></span></a
+        >
+        <p class="side-label">ESPAÇO DO ALUNO</p>
+        <nav aria-label="Menu principal" class="side-nav">
+          <button class="nav-item active" type="button" data-view="overview">
+            <span aria-hidden="true">◫</span> Visão geral
+          </button>
+          <button class="nav-item" type="button" data-view="library">
+            <span aria-hidden="true">▤</span> Meus cursos
+          </button>
+          <button class="nav-item" type="button" data-view="progress">
+            <span aria-hidden="true">◷</span> Meu progresso
+          </button>
+        </nav>
+        <div class="side-bottom">
+          <p>Um espaço para aprender no seu ritmo.</p>
+          <span>Projeto demonstrativo · 2026</span>
+        </div>
+      </aside>
+      <main id="main" class="main" tabindex="-1">
+        <header class="topbar">
+          <button
+            id="menu-button"
+            class="menu-button"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            ☰
+          </button>
+          <div class="breadcrumb">
+            Área de membros <span>/</span>
+            <strong id="view-name">Visão geral</strong>
+          </div>
+          <div class="account">
+            <span class="avatar" aria-hidden="true">D</span
+            ><span>Aluno Demo<small>Acesso demonstrativo</small></span>
+          </div>
+        </header>
+        <div class="main-content">
+          <div class="heading-row">
+            <div>
+              <p class="eyebrow">BEM-VINDO DE VOLTA</p>
+              <h1 id="page-title">Sua jornada continua aqui.</h1>
+              <p id="page-subtitle">
+                Escolha uma aula, acompanhe seu progresso e continue de onde
+                parou.
+              </p>
+            </div>
+            <span class="demo-chip">AMBIENTE DEMO</span>
+          </div>
+          <section id="overview-view" class="view" aria-label="Visão geral">
+            <div class="hero">
+              <div>
+                <span class="hero-label">EM DESTAQUE</span>
+                <h2>Domine o próximo passo, uma aula por vez.</h2>
+                <p>
+                  Conteúdo organizado em módulos e uma experiência focada no que
+                  importa: aprender.
+                </p>
+                <button class="hero-button" type="button" data-view="library">
+                  Explorar cursos <span aria-hidden="true">→</span>
+                </button>
+              </div>
+              <div class="hero-shape" aria-hidden="true">
+                <div class="orb"></div>
+                <div class="orb-small"></div>
+                <div class="shape-line"></div>
+              </div>
+            </div>
+            <div class="section-header">
+              <div>
+                <span class="eyebrow">CONTINUE APRENDENDO</span>
+                <h2>Seus cursos</h2>
+              </div>
+              <button class="inline-button" type="button" data-view="library">
+                Ver todos →
+              </button>
+            </div>
+            <div id="featured-courses" class="course-grid"></div>
+          </section>
+          <section
+            id="library-view"
+            class="view hidden"
+            aria-label="Biblioteca de cursos"
+          >
+            <div class="toolbar">
+              <label for="course-search">Buscar curso ou aula</label
+              ><input
+                id="course-search"
+                type="search"
+                placeholder="Ex.: Planejamento"
+                autocomplete="off"
+              />
+            </div>
+            <div id="all-courses" class="course-grid"></div>
+            <p id="search-empty" class="empty hidden">
+              Nenhum curso corresponde à busca.
+            </p>
+          </section>
+          <section
+            id="progress-view"
+            class="view hidden"
+            aria-label="Seu progresso"
+          >
+            <div class="progress-summary">
+              <span class="eyebrow">SEU DESENVOLVIMENTO</span>
+              <h2>Um passo de cada vez.</h2>
+              <p>
+                O progresso desta demonstração é salvo apenas neste navegador.
+                Nenhuma informação vai para um servidor.
+              </p>
+              <div id="progress-list"></div>
+              <button id="reset-progress" class="reset-button" type="button">
+                Reiniciar progresso de demonstração
+              </button>
+            </div>
+          </section>
+          <section
+            id="lesson-view"
+            class="view hidden"
+            aria-label="Aula selecionada"
+          >
+            <button class="back-button" type="button" data-view="library">
+              ← Voltar aos cursos
+            </button>
+            <div class="lesson-layout">
+              <div>
+                <div class="video-placeholder">
+                  <span class="play-icon" aria-hidden="true">▶</span>
+                  <p>Prévia de aula</p>
+                  <small
+                    >Nenhum vídeo real é carregado nesta demonstração.</small
+                  >
+                </div>
+                <span class="eyebrow" id="lesson-category"></span>
+                <h2 id="lesson-title"></h2>
+                <p id="lesson-description"></p>
+                <button
+                  id="complete-lesson"
+                  class="complete-button"
+                  type="button"
+                ></button>
+              </div>
+              <aside class="lesson-sidebar">
+                <h3>Conteúdo do curso</h3>
+                <div id="lesson-list"></div>
+              </aside>
+            </div>
+          </section>
+        </div>
+        <footer class="footer">
+          Horizonte Academy é uma marca fictícia usada somente nesta
+          demonstração de portfólio.
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
